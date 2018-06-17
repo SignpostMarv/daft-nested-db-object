@@ -212,11 +212,14 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         $queryArgs = [];
         $filter = [];
 
+        $leftOp = ($withRoot ? ' >= ' : ' > ');
+        $rightOp = ($withRoot ? ' <= ' : ' < ');
+
         if (is_int($left)) {
             $queryArgs[] = $left;
             $filter[] =
                 $this->db->escapeIdentifier('intNestedLeft') .
-                ($treeNotPath ? ($withRoot ? ' >= ' : ' > ') : ($withRoot ? ' <= ' : ' < ')) .
+                ($treeNotPath ? $leftOp : $rightOp) .
                 ' ?';
         }
 
@@ -224,7 +227,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
             $queryArgs[] = $right;
             $filter[] =
                 $this->db->escapeIdentifier('intNestedRight') .
-                ($treeNotPath ? ($withRoot ? ' <= ' : ' < ') : ($withRoot ? ' >= ' : ' > ')) .
+                ($treeNotPath ? $rightOp : $leftOp) .
                 ' ?';
         }
 
