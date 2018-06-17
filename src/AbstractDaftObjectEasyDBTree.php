@@ -179,8 +179,6 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
 
     final protected function SelectingQueryDaftNestedObjectTreeFromArgs(bool $recall) : string
     {
-        $selecting = 'COUNT(*)';
-
         if ($recall) {
             /**
             * @var string[] $props
@@ -195,7 +193,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
             ));
         }
 
-        return $selecting;
+        return 'COUNT(*)';
     }
 
     /**
