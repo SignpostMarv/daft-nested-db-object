@@ -177,14 +177,8 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         parent::RememberDaftObjectData($object);
     }
 
-    protected function QueryDaftNestedObjectTreeFromArgs(
-        bool $recall,
-        ? int $left,
-        ? int $right,
-        ? int $limit,
-        bool $withRoot,
-        bool $treeNotPath = true
-    ) : PDOStatement {
+    final protected function SelectingQueryDaftNestedObjectTreeFromArgs(bool $recall) : string
+    {
         $selecting = 'COUNT(*)';
 
         if ($recall) {
@@ -206,6 +200,19 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
                 $props
             ));
         }
+
+        return $selecting;
+    }
+
+    protected function QueryDaftNestedObjectTreeFromArgs(
+        bool $recall,
+        ? int $left,
+        ? int $right,
+        ? int $limit,
+        bool $withRoot,
+        bool $treeNotPath = true
+    ) : PDOStatement {
+        $selecting = $this->SelectingQueryDaftNestedObjectTreeFromArgs($recall);
 
         $queryArgs = [];
         $filter = [];
