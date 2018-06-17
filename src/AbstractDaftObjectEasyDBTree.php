@@ -204,6 +204,21 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         return $selecting;
     }
 
+    /**
+    * @param array<int, string> $filter
+    */
+    final protected function FilterQueryDaftNestedObjectTreeFromArgs(array $filter) : string
+    {
+        return
+                (count($filter) > 0)
+                    ? (
+                        ' WHERE ' .
+                        implode(' AND ', $filter)
+                    )
+                    : ''
+        ;
+    }
+
     protected function QueryDaftNestedObjectTreeFromArgs(
         bool $recall,
         ? int $left,
@@ -252,14 +267,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
             $selecting .
             ' FROM ' .
             $this->db->escapeIdentifier($this->DaftObjectDatabaseTable()) .
-            (
-                (count($filter) > 0)
-                    ? (
-                        ' WHERE ' .
-                        implode(' AND ', $filter)
-                    )
-                    : ''
-            ) .
+            $this->FilterQueryDaftNestedObjectTreeFromArgs($filter) .
             ' ORDER BY ' .
             $this->db->escapeIdentifier('intNestedLeft');
 
