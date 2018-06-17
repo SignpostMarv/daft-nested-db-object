@@ -1,0 +1,33 @@
+<phpunit bootstrap="phpunit-bootstrap.php">
+  <testsuites>
+    <testsuite name="DaftObject">
+      <directory>./vendor/signpostmarv/daft-object/Tests/</directory>
+    </testsuite>
+    <testsuite name="DaftObjectEasyDBRepository">
+      <directory>./vendor/signpostmarv/daft-db-object/easydb-Tests/</directory>
+    </testsuite>
+    <testsuite name="DaftNestedObject">
+      <directory>./vendor/signpostmarv/daft-nested-object/Tests/</directory>
+    </testsuite>
+    <testsuite name="DaftNestedObject: EasyDB">
+      <directory>.//Tests/</directory>
+    </testsuite>
+  </testsuites>
+  <logging>
+    <log
+      type="coverage-html"
+      target="phpunit"
+    />
+    <log
+      type="coverage-text"
+      target="php://stdout"
+      showUncoveredFiles="true"
+      showOnlySummary="false"
+    />
+  </logging>
+  <filter>
+    <whitelist processUncoveredFilesFromWhitelist="true">
+      <directory suffix=".php">./src/</directory>
+    </whitelist>
+  </filter>
+</phpunit>
