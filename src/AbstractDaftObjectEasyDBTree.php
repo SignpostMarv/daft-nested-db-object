@@ -209,14 +209,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
     */
     final protected function FilterQueryDaftNestedObjectTreeFromArgs(array $filter) : string
     {
-        return
-                (count($filter) > 0)
-                    ? (
-                        ' WHERE ' .
-                        implode(' AND ', $filter)
-                    )
-                    : ''
-        ;
+        return (count($filter) > 0) ? (' WHERE ' . implode(' AND ', $filter)) : '';
     }
 
     protected function QueryDaftNestedObjectTreeFromArgs(
