@@ -221,11 +221,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         $escapedLeft = $this->db->escapeIdentifier('intNestedLeft');
 
         $maybeArgs = array_filter([
-            (
-                $escapedLeft .
-                ($treeNotPath ? $leftOp : $rightOp) .
-                ' ?'
-            ) => $left,
+            ($escapedLeft . ($treeNotPath ? $leftOp : $rightOp) . ' ?') => $left,
             (
                 $this->db->escapeIdentifier('intNestedRight') .
                 ($treeNotPath ? $rightOp : $leftOp) .
