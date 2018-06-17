@@ -213,7 +213,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         $leftOp = ($withRoot ? ' >= ' : ' > ');
         $rightOp = ($withRoot ? ' <= ' : ' < ');
 
-        foreach(
+        foreach (
             [
                 (
                     $this->db->escapeIdentifier('intNestedLeft') .
