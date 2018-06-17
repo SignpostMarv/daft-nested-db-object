@@ -284,15 +284,14 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         /**
         * @var array<string, scalar> $id
         */
-        foreach ($sth->fetchAll(PDO::FETCH_NUM) as $id) {
-            $obj = $this->RecallDaftObject($id);
+        $ids = $sth->fetchAll(PDO::FETCH_NUM);
 
-            if ($obj instanceof DaftNestedObject) {
-                $out[] = $obj;
+        return array_filter(
+            array_map([$this, 'RecallDaftObject'], $ids),
+            function (? DaftObject $maybe) : bool {
+                return ($maybe instanceof DaftNestedObject);
             }
-        }
-
-        return $out;
+        );
     }
 
     protected function CountDaftNestedObjectTreeFromArgs(
