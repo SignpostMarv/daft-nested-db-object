@@ -193,8 +193,6 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
             */
             $props = $this->type::DaftObjectIdProperties();
 
-            $query = 'SELECT ';
-
             $escapedProps = [];
 
             foreach ($props as $prop) {
