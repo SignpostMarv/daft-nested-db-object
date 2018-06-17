@@ -219,28 +219,26 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         $rightOp = ($withRoot ? ' <= ' : ' < ');
 
         $maybeArgs = array_filter([
-                (
-                    $this->db->escapeIdentifier('intNestedLeft') .
-                    ($treeNotPath ? $leftOp : $rightOp) .
-                    ' ?'
-                ) => $left,
-                (
-                    $this->db->escapeIdentifier('intNestedRight') .
-                    ($treeNotPath ? $rightOp : $leftOp) .
-                    ' ?'
-                ) => $right,
+            (
+                $this->db->escapeIdentifier('intNestedLeft') .
+                ($treeNotPath ? $leftOp : $rightOp) .
+                ' ?'
+            ) => $left,
+            (
+                $this->db->escapeIdentifier('intNestedRight') .
+                ($treeNotPath ? $rightOp : $leftOp) .
+                ' ?'
+            ) => $right,
         ], 'is_int');
 
         foreach ($maybeArgs as $filterStr => $queryArgVar) {
-                $queryArgs[] = $queryArgVar;
-                $filter[] = $filterStr;
+            $queryArgs[] = $queryArgVar;
+            $filter[] = $filterStr;
         }
 
         if (is_int($limit)) {
             $queryArgs[] = $limit;
-            $filter[] =
-                $this->db->escapeIdentifier('intNestedLevel') .
-                ' <= ?';
+            $filter[] = $this->db->escapeIdentifier('intNestedLevel') . ' <= ?';
         }
 
         $query =
