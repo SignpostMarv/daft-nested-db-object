@@ -156,7 +156,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
                 );
             }
         } elseif ( ! is_a($type, DaftNestedObject::class, true)) {
-                throw new DaftObjectRepositoryTypeByClassMethodAndTypeException(
+            throw new DaftObjectRepositoryTypeByClassMethodAndTypeException(
                 1,
                 static::class,
                 __FUNCTION__,
