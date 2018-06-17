@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e46f5fe2dc241bb6d62e31742db59de",
+    "content-hash": "02d35eb4836002e3dd84c35d19c100ee",
     "packages": [
         {
             "name": "paragonie/easydb",
@@ -116,16 +116,16 @@
         },
         {
             "name": "signpostmarv/daft-nested-object",
-            "version": "v0.1.7",
+            "version": "v0.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-nested-object.git",
-                "reference": "59b84c45aeb8bc535d7e648ba397e97749c324a6"
+                "reference": "054fe2f5cd6196f4155f24a8f6c8080898992145"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-nested-object/zipball/59b84c45aeb8bc535d7e648ba397e97749c324a6",
-                "reference": "59b84c45aeb8bc535d7e648ba397e97749c324a6",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-nested-object/zipball/054fe2f5cd6196f4155f24a8f6c8080898992145",
+                "reference": "054fe2f5cd6196f4155f24a8f6c8080898992145",
                 "shasum": ""
             },
             "require": {
@@ -161,7 +161,7 @@
                 }
             ],
             "description": "nested sets implementation for daft object",
-            "time": "2018-06-17T15:57:59+00:00"
+            "time": "2018-06-17T16:33:17+00:00"
         },
         {
             "name": "signpostmarv/daft-object",
