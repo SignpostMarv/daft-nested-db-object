@@ -226,12 +226,12 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
 
         $escapedLeft = $this->db->escapeIdentifier('intNestedLeft');
 
-        $maybeArgs = array_filter([
+        $maybeArgs = [
             ($escapedLeft . $leftOp . ' ?') => $left,
             ($this->db->escapeIdentifier('intNestedRight') . $rightOp . ' ?') => $right,
-        ], 'is_int');
+        ];
 
-        foreach ($maybeArgs as $filterStr => $queryArgVar) {
+        foreach (array_filter($maybeArgs, 'is_int') as $filterStr => $queryArgVar) {
             $queryArgs[] = $queryArgVar;
             $filter[] = $filterStr;
         }
