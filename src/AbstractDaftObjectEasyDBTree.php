@@ -210,8 +210,6 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         bool $withRoot,
         bool $treeNotPath = true
     ) : PDOStatement {
-        $selecting = $this->SelectingQueryDaftNestedObjectTreeFromArgs($recall);
-
         $queryArgs = [];
         $filter = [];
 
@@ -239,7 +237,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
 
         $query =
             'SELECT ' .
-            $selecting .
+            $this->SelectingQueryDaftNestedObjectTreeFromArgs($recall) .
             ' FROM ' .
             $this->db->escapeIdentifier($this->DaftObjectDatabaseTable()) .
             $this->FilterQueryDaftNestedObjectTreeFromArgs($filter) .
