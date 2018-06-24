@@ -202,6 +202,23 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         return (count($filter) > 0) ? (' WHERE ' . implode(' AND ', $filter)) : '';
     }
 
+    /**
+    * @return array<int, string>
+    */
+    final protected function LeftOpRightOpDaftNestedObjectTreeFromArgs(
+        bool $withRoot,
+        bool $treeNotPath
+    ) : array {
+        $leftOp = ($withRoot ? ' >= ' : ' > ');
+        $rightOp = ($withRoot ? ' <= ' : ' < ');
+
+        if ( ! $treeNotPath) {
+            list($leftOp, $rightOp) = [$rightOp, $leftOp];
+        }
+
+        return [$leftOp, $rightOp];
+    }
+
     protected function QueryDaftNestedObjectTreeFromArgs(
         bool $recall,
         ? int $left,
@@ -213,12 +230,10 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         $queryArgs = [];
         $filter = [];
 
-        $leftOp = ($withRoot ? ' >= ' : ' > ');
-        $rightOp = ($withRoot ? ' <= ' : ' < ');
-
-        if ( ! $treeNotPath) {
-            list($leftOp, $rightOp) = [$rightOp, $leftOp];
-        }
+        list($leftOp, $rightOp) = $this->LeftOpRightOpDaftNestedObjectTreeFromArgs(
+            $withRoot,
+            $treeNotPath
+        );
 
         $escapedLeft = $this->db->escapeIdentifier('intNestedLeft');
 
