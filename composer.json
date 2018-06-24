@@ -46,9 +46,9 @@
         "ext-PDO": "^7.1",
         "ext-mbstring": "^7.1",
         "paragonie/easydb": "^2.6",
-        "signpostmarv/daft-db-object": "^0.6.0",
-        "signpostmarv/daft-nested-object": "^0.1.8",
-        "signpostmarv/daft-object": "^0.10.6"
+        "signpostmarv/daft-db-object": "^0.6.1",
+        "signpostmarv/daft-nested-object": "^0.2.1",
+        "signpostmarv/daft-object": "^0.11.0"
     },
     "require-dev": {
         "maglnet/composer-require-checker": "^0.2.1",

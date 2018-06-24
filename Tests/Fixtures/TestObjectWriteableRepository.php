@@ -11,6 +11,7 @@ namespace SignpostMarv\DaftObject\DaftNestedDbObject\Tests\Fixtures;
 use SignpostMarv\DaftObject\DaftNestedWriteableObject;
 use SignpostMarv\DaftObject\DaftNestedWriteableObjectTree;
 use SignpostMarv\DaftObject\DaftObjectRepositoryTypeByClassMethodAndTypeException;
+use SignpostMarv\DaftObject\TraitRememberDaftObject;
 use SignpostMarv\DaftObject\TraitWriteableTree;
 
 class TestObjectWriteableRepository
@@ -19,6 +20,7 @@ class TestObjectWriteableRepository
     implements
         DaftNestedWriteableObjectTree
 {
+    use TraitRememberDaftObject;
     use TraitWriteableTree;
 
     /**
