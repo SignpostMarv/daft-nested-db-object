@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "206cd5b7ebb45d444db2b4399fbb0d5e",
+    "content-hash": "bafb222bd443f610de1b1608ac0ae366",
     "packages": [
         {
             "name": "paragonie/easydb",
@@ -68,23 +68,23 @@
         },
         {
             "name": "signpostmarv/daft-db-object",
-            "version": "v0.7.0",
+            "version": "v0.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-db-object.git",
-                "reference": "9156427d5b34d484ff4020a3411a33297cda449f"
+                "reference": "ce717af9b775731b3cf59ca224ab3533b993c08e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-db-object/zipball/9156427d5b34d484ff4020a3411a33297cda449f",
-                "reference": "9156427d5b34d484ff4020a3411a33297cda449f",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-db-object/zipball/ce717af9b775731b3cf59ca224ab3533b993c08e",
+                "reference": "ce717af9b775731b3cf59ca224ab3533b993c08e",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "paragonie/easydb": "^2.4",
                 "php": "^7.1",
-                "signpostmarv/daft-object": "^0.12.0"
+                "signpostmarv/daft-object": "^0.12.1"
             },
             "require-dev": {
                 "maglnet/composer-require-checker": "dev-master",
@@ -114,25 +114,25 @@
                 }
             ],
             "description": "Daft Object with database repositories",
-            "time": "2018-07-10T18:33:18+00:00"
+            "time": "2018-07-11T18:09:25+00:00"
         },
         {
             "name": "signpostmarv/daft-nested-object",
-            "version": "v0.3.0",
+            "version": "v0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-nested-object.git",
-                "reference": "35bce3afc4723be5c096592e9a694d0bd95f3ac8"
+                "reference": "a8577cefdae8df604d91607b2f9b7b4f000566d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-nested-object/zipball/35bce3afc4723be5c096592e9a694d0bd95f3ac8",
-                "reference": "35bce3afc4723be5c096592e9a694d0bd95f3ac8",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-nested-object/zipball/a8577cefdae8df604d91607b2f9b7b4f000566d1",
+                "reference": "a8577cefdae8df604d91607b2f9b7b4f000566d1",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1",
-                "signpostmarv/daft-object": "^0.12.0"
+                "signpostmarv/daft-object": "^0.12.1"
             },
             "require-dev": {
                 "maglnet/composer-require-checker": "dev-master",
@@ -163,20 +163,20 @@
                 }
             ],
             "description": "nested sets implementation for daft object",
-            "time": "2018-07-10T23:21:58+00:00"
+            "time": "2018-07-11T18:25:33+00:00"
         },
         {
             "name": "signpostmarv/daft-object",
-            "version": "v0.12.0",
+            "version": "v0.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-object.git",
-                "reference": "6c9a26f8495b46fb2a029b5f677747d472477987"
+                "reference": "c9b30456ce64ccb0f11acd5bf01f0d31f37879a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-object/zipball/6c9a26f8495b46fb2a029b5f677747d472477987",
-                "reference": "6c9a26f8495b46fb2a029b5f677747d472477987",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-object/zipball/c9b30456ce64ccb0f11acd5bf01f0d31f37879a8",
+                "reference": "c9b30456ce64ccb0f11acd5bf01f0d31f37879a8",
                 "shasum": ""
             },
             "require": {
@@ -212,7 +212,7 @@
                 }
             ],
             "description": "Daft Object",
-            "time": "2018-07-10T17:58:36+00:00"
+            "time": "2018-07-11T17:21:48+00:00"
         }
     ],
     "packages-dev": [
