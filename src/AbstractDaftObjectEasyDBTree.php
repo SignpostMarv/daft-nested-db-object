@@ -48,6 +48,9 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         return $this->CountDaftNestedObjectTreeFromArgs($left, $right, $limit, $withRoot);
     }
 
+    /**
+    * @param mixed $id
+    */
     public function RecallDaftNestedObjectTreeWithId(
         $id,
         bool $withRoot,
@@ -69,6 +72,9 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
                 );
     }
 
+    /**
+    * @param mixed $id
+    */
     public function CountDaftNestedObjectTreeWithId(
         $id,
         bool $withRoot,
@@ -116,6 +122,9 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         );
     }
 
+    /**
+    * @param mixed $id
+    */
     public function RecallDaftNestedObjectPathToId($id, bool $includeLeaf) : array
     {
         $object = $this->RecallDaftObject($id);
@@ -126,6 +135,9 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
                 : [];
     }
 
+    /**
+    * @param mixed $id
+    */
     public function CountDaftNestedObjectPathToId($id, bool $includeLeaf) : int
     {
         $object = $this->RecallDaftObject($id);
