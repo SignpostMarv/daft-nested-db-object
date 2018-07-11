@@ -180,11 +180,13 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         return parent::DaftObjectRepositoryByType($type, $db);
     }
 
-    protected function RememberDaftObjectData(DefinesOwnIdPropertiesInterface $object) : void
-    {
+    public function RememberDaftObjectData(
+        DefinesOwnIdPropertiesInterface $object,
+        bool $assumeDoesNotExist = false
+    ) : void {
         static::ThrowIfNotType($object, DaftNestedObject::class, 1, __METHOD__);
 
-        parent::RememberDaftObjectData($object);
+        parent::RememberDaftObjectData($object, $assumeDoesNotExist);
     }
 
     final protected function SelectingQueryDaftNestedObjectTreeFromArgs(bool $recall) : string
