@@ -46,16 +46,16 @@
         "ext-PDO": "*",
         "ext-mbstring": "*",
         "paragonie/easydb": "^2.6",
-        "signpostmarv/daft-db-object": "^0.7.3",
-        "signpostmarv/daft-nested-object": "^0.3.3",
-        "signpostmarv/daft-object": "^0.12.3"
+        "signpostmarv/daft-db-object": "^0.8.0",
+        "signpostmarv/daft-nested-object": "^0.4.0",
+        "signpostmarv/daft-object": "^0.13.1"
     },
     "require-dev": {
         "maglnet/composer-require-checker": "^1.0",
-        "phpstan/phpstan": "dev-master",
-        "phpstan/phpstan-phpunit": "dev-master",
-        "phpstan/phpstan-strict-rules": "dev-master",
-        "phpunit/phpunit": "^7.2",
+        "phpstan/phpstan": "^0.10.3",
+        "phpstan/phpstan-phpunit": "^0.10.0",
+        "phpstan/phpstan-strict-rules": "^0.10.1",
+        "phpunit/phpunit": "^7.3",
         "povils/phpmnd": "^2.0",
         "roave/security-advisories": "dev-master",
         "sebastian/phpcpd": "^4.0",

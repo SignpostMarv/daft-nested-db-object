@@ -90,7 +90,8 @@ class DaftObjectRepositoryByTypeTest extends Base
     public function testForCreatedByArray(
         string $repoImplementation,
         string $typeImplementation,
-        string $typeExpected
+        string $typeExpected,
+        ...$additionalArgs
     ) : void {
         if (
             (
@@ -108,6 +109,11 @@ class DaftObjectRepositoryByTypeTest extends Base
                     : DaftNestedObject::class;
         }
 
-        parent::testForCreatedByArray($repoImplementation, $typeImplementation, $typeExpected);
+        parent::testForCreatedByArray(
+            $repoImplementation,
+            $typeImplementation,
+            $typeExpected,
+            ...$additionalArgs
+        );
     }
 }
