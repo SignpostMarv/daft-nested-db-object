@@ -29,6 +29,7 @@ class TestObjectRepository extends AbstractDaftObjectEasyDBTree
         parent::__construct($type, $db);
 
         ++self::$counts;
+
         $this->count = self::$counts;
 
         /**
@@ -36,10 +37,7 @@ class TestObjectRepository extends AbstractDaftObjectEasyDBTree
         */
         $type = $type;
 
-        $query =
-            'CREATE TABLE ' .
-            $db->escapeIdentifier($this->DaftObjectDatabaseTable()) .
-            ' (';
+        $query = 'CREATE TABLE ' . $db->escapeIdentifier($this->DaftObjectDatabaseTable()) . ' (';
 
         $queryParts = [];
 
@@ -48,14 +46,17 @@ class TestObjectRepository extends AbstractDaftObjectEasyDBTree
 
         foreach ($type::DaftObjectProperties() as $i => $prop) {
             $methodName = 'Get' . ucfirst($prop);
+
             if (true === $ref->hasMethod($methodName)) {
                 /**
                 * @var ReflectionType $refReturn
                 */
                 $refReturn = $ref->getMethod($methodName)->getReturnType();
+
                 $queryPart =
                     $db->escapeIdentifier($prop) .
                     static::QueryPartTypeFromRefReturn($refReturn);
+
                 if (false === in_array($prop, $nullables, true)) {
                     $queryPart .= ' NOT NULL';
                 }
@@ -65,20 +66,16 @@ class TestObjectRepository extends AbstractDaftObjectEasyDBTree
         }
 
         $primaryKeyCols = [];
+
         foreach ($type::DaftObjectIdProperties() as $col) {
             $primaryKeyCols[] = $db->escapeIdentifier($col);
         }
 
         if (count($primaryKeyCols) > 0) {
-            $queryParts[] =
-                'PRIMARY KEY (' .
-                implode(',', $primaryKeyCols) .
-                ')';
+            $queryParts[] = 'PRIMARY KEY (' . implode(',', $primaryKeyCols) . ')';
         }
 
-        $query .=
-            implode(',', $queryParts) .
-            ');';
+        $query .= implode(',', $queryParts) . ');';
 
         $db->safeQuery($query);
     }
@@ -103,12 +100,10 @@ class TestObjectRepository extends AbstractDaftObjectEasyDBTree
                 case 'bool':
                     return ' INTEGER';
                 default:
-                    throw new RuntimeException(
-                        sprintf(
-                            'Unsupported data type! (%s)',
-                            $refReturn->__toString()
-                        )
-                    );
+                    throw new RuntimeException(sprintf(
+                        'Unsupported data type! (%s)',
+                        $refReturn->__toString()
+                    ));
             }
         }
 
