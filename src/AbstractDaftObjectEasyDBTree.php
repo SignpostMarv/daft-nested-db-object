@@ -148,11 +148,6 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
                 : 0;
     }
 
-    public function CompareObjects(DaftNestedObject $a, DaftNestedObject $b) : int
-    {
-        return $a->GetIntNestedSortOrder() <=> $b->GetIntNestedSortOrder();
-    }
-
     public static function DaftObjectRepositoryByType(
         string $type,
         ? EasyDB $db = null
