@@ -148,10 +148,18 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
                 : 0;
     }
 
+    /**
+    * {@inheritdoc}
+    */
     public static function DaftObjectRepositoryByType(
         string $type,
-        ? EasyDB $db = null
+        ...$args
     ) : DaftObjectRepository {
+        /**
+        * @var EasyDB|null $db
+        */
+        $db = array_shift($args) ?: null;
+
         if (is_a(static::class, DaftNestedWriteableObjectTree::class, true)) {
             if ( ! is_a($type, DaftNestedWriteableObject::class, true)) {
                 throw new DaftObjectRepositoryTypeByClassMethodAndTypeException(
@@ -172,7 +180,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
             );
         }
 
-        return parent::DaftObjectRepositoryByType($type, $db);
+        return parent::DaftObjectRepositoryByType($type, $db, ...$args);
     }
 
     public function RememberDaftObjectData(
