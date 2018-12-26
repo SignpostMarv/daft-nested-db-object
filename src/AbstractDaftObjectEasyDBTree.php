@@ -192,6 +192,9 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         parent::RememberDaftObjectData($object, $assumeDoesNotExist);
     }
 
+    /**
+    * @psalm-suppress InvalidStringClass
+    */
     final protected function SelectingQueryDaftNestedObjectTreeFromArgs(bool $recall) : string
     {
         if ($recall) {
