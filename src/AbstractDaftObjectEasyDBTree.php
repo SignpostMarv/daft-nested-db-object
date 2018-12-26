@@ -156,7 +156,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         ...$args
     ) : DaftObjectRepository {
         /**
-        * @var EasyDB|null $db
+        * @var EasyDB|null
         */
         $db = array_shift($args) ?: null;
 
@@ -196,7 +196,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
     {
         if ($recall) {
             /**
-            * @var string[] $props
+            * @var string[]
             */
             $props = $this->type::DaftObjectIdProperties();
 
