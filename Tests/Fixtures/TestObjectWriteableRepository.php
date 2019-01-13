@@ -31,7 +31,7 @@ class TestObjectWriteableRepository
         string $type,
         int $argument,
         string $function
-    ) : void {
+    ) {
         if ( ! is_a($object, DaftNestedWriteableObject::class, is_string($object))) {
             throw new DaftObjectRepositoryTypeByClassMethodAndTypeException(
                 $argument,

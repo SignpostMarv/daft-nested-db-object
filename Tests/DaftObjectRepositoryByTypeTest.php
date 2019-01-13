@@ -92,7 +92,7 @@ class DaftObjectRepositoryByTypeTest extends Base
         string $typeImplementation,
         string $typeExpected,
         ...$additionalArgs
-    ) : void {
+    ) {
         if (
             (
                 is_a($repoImplementation, DaftNestedWriteableObjectTree::class, true) &&
