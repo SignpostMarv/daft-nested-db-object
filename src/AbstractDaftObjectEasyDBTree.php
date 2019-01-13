@@ -14,14 +14,34 @@ use PDOStatement;
 
 abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepository implements DaftNestedObjectTree
 {
+    const BOOL_RETRIEVE_WITH_ROOT = false;
+
+    const INT_LIMIT_ZERO = 0;
+
+    const DEFAULT_COUNT_IF_NOT_OBJECT = 0;
+
+    const INT_ARG_INDEX_FIRST = 1;
+
+    const DEFAULT_BOOL_FETCH_TREE_NOT_PATH = true;
+
     public function RecallDaftNestedObjectFullTree(int $limit = null) : array
     {
-        return $this->RecallDaftNestedObjectTreeFromArgs(null, null, $limit, false);
+        return $this->RecallDaftNestedObjectTreeFromArgs(
+            null,
+            null,
+            $limit,
+            self::BOOL_RETRIEVE_WITH_ROOT
+        );
     }
 
     public function CountDaftNestedObjectFullTree(int $withLimit = null) : int
     {
-        return $this->CountDaftNestedObjectTreeFromArgs(null, null, $withLimit, false);
+        return $this->CountDaftNestedObjectTreeFromArgs(
+            null,
+            null,
+            $withLimit,
+            self::BOOL_RETRIEVE_WITH_ROOT
+        );
     }
 
     public function RecallDaftNestedObjectTreeWithObject(
@@ -67,7 +87,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
                 )
                 : (
                     ((array) $id === (array) $this->GetNestedObjectTreeRootId())
-                        ? $this->RecallDaftNestedObjectFullTree(0)
+                        ? $this->RecallDaftNestedObjectFullTree(self::INT_LIMIT_ZERO)
                         : []
                 );
     }
@@ -92,7 +112,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
                 : (
                     ((array) $id === (array) $this->GetNestedObjectTreeRootId())
                         ? $this->CountDaftNestedObjectFullTree($limit)
-                        : 0
+                        : self::DEFAULT_COUNT_IF_NOT_OBJECT
                 );
     }
 
@@ -145,7 +165,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         return
             ($object instanceof DaftNestedObject)
                 ? $this->CountDaftNestedObjectPathToObject($object, $includeLeaf)
-                : 0;
+                : self::DEFAULT_COUNT_IF_NOT_OBJECT;
     }
 
     /**
@@ -187,7 +207,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         DefinesOwnIdPropertiesInterface $object,
         bool $assumeDoesNotExist = false
     ) : void {
-        NestedTypeParanoia::ThrowIfNotNestedType($object, 1, static::class, __FUNCTION__);
+        NestedTypeParanoia::ThrowIfNotNestedType($object, self::INT_ARG_INDEX_FIRST, static::class, __FUNCTION__);
 
         parent::RememberDaftObjectData($object, $assumeDoesNotExist);
     }
@@ -242,7 +262,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         ? int $right,
         ? int $limit,
         bool $withRoot,
-        bool $treeNotPath = true
+        bool $treeNotPath = self::DEFAULT_BOOL_FETCH_TREE_NOT_PATH
     ) : PDOStatement {
         $queryArgs = [];
         $filter = [];
