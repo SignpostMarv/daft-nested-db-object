@@ -207,7 +207,12 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         DefinesOwnIdPropertiesInterface $object,
         bool $assumeDoesNotExist = false
     ) : void {
-        NestedTypeParanoia::ThrowIfNotNestedType($object, self::INT_ARG_INDEX_FIRST, static::class, __FUNCTION__);
+        NestedTypeParanoia::ThrowIfNotNestedType(
+            $object,
+            self::INT_ARG_INDEX_FIRST,
+            static::class,
+            __FUNCTION__
+        );
 
         parent::RememberDaftObjectData($object, $assumeDoesNotExist);
     }
