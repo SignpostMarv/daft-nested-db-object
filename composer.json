@@ -46,13 +46,13 @@
         "ext-PDO": "*",
         "ext-mbstring": "*",
         "paragonie/easydb": "^2.6",
-        "signpostmarv/daft-db-object": "^0.11.1",
-        "signpostmarv/daft-nested-object": "^0.7.1",
-        "signpostmarv/daft-object": "^0.17.0"
+        "signpostmarv/daft-db-object": "^1.0",
+        "signpostmarv/daft-nested-object": "^1.0",
+        "signpostmarv/daft-object": "^1.1"
     },
     "require-dev": {
         "maglnet/composer-require-checker": "^1.1",
-        "phpstan/phpstan": "^0.10.6",
+        "phpstan/phpstan": "^0.10.8",
         "phpstan/phpstan-phpunit": "^0.10.0",
         "phpstan/phpstan-strict-rules": "^0.10.1",
         "phpunit/phpunit": "^7.5",
