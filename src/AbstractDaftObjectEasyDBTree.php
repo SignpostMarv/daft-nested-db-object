@@ -70,6 +70,8 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
 
     /**
     * @param mixed $id
+    *
+    * @return array<int, DaftNestedObject>
     */
     public function RecallDaftNestedObjectTreeWithId(
         $id,
@@ -116,6 +118,9 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
                 );
     }
 
+    /**
+    * @return array<int, DaftNestedObject>
+    */
     public function RecallDaftNestedObjectPathToObject(
         DaftNestedObject $leaf,
         bool $includeLeaf
@@ -144,6 +149,8 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
 
     /**
     * @param mixed $id
+    *
+    * @return array<int, DaftNestedObject>
     */
     public function RecallDaftNestedObjectPathToId($id, bool $includeLeaf) : array
     {
@@ -306,6 +313,9 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         return $sth;
     }
 
+    /**
+    * @return array<int, DaftNestedObject>
+    */
     protected function RecallDaftNestedObjectTreeFromArgs(
         ? int $left,
         ? int $right,
@@ -322,12 +332,17 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
             $treeNotPath
         );
 
-        return array_filter(
+        /**
+        * @var array<int, DaftNestedObject>
+        */
+        $out = array_filter(
             array_map([$this, 'RecallDaftObject'], (array) $sth->fetchAll(PDO::FETCH_NUM)),
             function (? DaftObject $maybe) : bool {
                 return $maybe instanceof DaftNestedObject;
             }
         );
+
+        return $out;
     }
 
     protected function CountDaftNestedObjectTreeFromArgs(
