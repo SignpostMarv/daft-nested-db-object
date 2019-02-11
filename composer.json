@@ -33,8 +33,19 @@
         "sort-packages": true
     },
     "scripts": {
+        "phpunit": [
+            "phpunit -vvvv --coverage-clover=phpunit.clover"
+        ],
+        "scrutinizer": [
+            "@phpunit",
+            "infection --min-msi=100",
+            "@other-tests"
+        ],
         "tests": [
-            "phpunit -vvvv --coverage-clover=phpunit.clover",
+            "@phpunit",
+            "@other-tests"
+        ],
+        "other-tests": [
             "phpstan analyse -c ./phpstan.neon .php_cs.dist src",
             "psalm",
             "phpcpd src",
