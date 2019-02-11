@@ -12,6 +12,13 @@ use ParagonIE\EasyDB\EasyDB;
 use PDO;
 use PDOStatement;
 
+/**
+* @template TDbObj as DaftNestedObject
+*
+* @template-extends AbstractDaftObjectEasyDBRepository<TDbObj>
+*
+* @template-implements DaftNestedObjectTree<TDbObj>
+*/
 abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepository implements DaftNestedObjectTree
 {
     const BOOL_RETRIEVE_WITH_ROOT = false;
@@ -24,6 +31,11 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
 
     const DEFAULT_BOOL_FETCH_TREE_NOT_PATH = true;
 
+    /**
+    * {@inheritdoc}
+    *
+    * @psalm-return array<int, TDbObj>
+    */
     public function RecallDaftNestedObjectFullTree(int $limit = null) : array
     {
         return $this->RecallDaftNestedObjectTreeFromArgs(
@@ -44,6 +56,11 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         );
     }
 
+    /**
+    * {@inheritdoc}
+    *
+    * @psalm-param TDbObj $root
+    */
     public function RecallDaftNestedObjectTreeWithObject(
         DaftNestedObject $root,
         bool $withRoot,
@@ -56,6 +73,11 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         return $this->RecallDaftNestedObjectTreeFromArgs($left, $right, $limit, $withRoot);
     }
 
+    /**
+    * {@inheritdoc}
+    *
+    * @psalm-param TDbObj $root
+    */
     public function CountDaftNestedObjectTreeWithObject(
         DaftNestedObject $root,
         bool $withRoot,
@@ -69,18 +91,24 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
     }
 
     /**
-    * @param mixed $id
+    * {@inheritdoc}
     *
-    * @return array<int, DaftNestedObject>
+    * @psalm-return array<int, TDbObj>
     */
     public function RecallDaftNestedObjectTreeWithId(
         $id,
         bool $withRoot,
         ? int $limit
     ) : array {
+        /**
+        * @psalm-var TDbObj|null
+        */
         $object = $this->RecallDaftObject($id);
 
-        return
+        /**
+        * @psalm-var array<int, TDbObj>
+        */
+        $out =
             ($object instanceof DaftNestedObject)
                 ? $this->RecallDaftNestedObjectTreeWithObject(
                     $object,
@@ -92,16 +120,21 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
                         ? $this->RecallDaftNestedObjectFullTree(self::INT_LIMIT_ZERO)
                         : []
                 );
+
+        return $out;
     }
 
     /**
-    * @param mixed $id
+    * {@inheritdoc}
     */
     public function CountDaftNestedObjectTreeWithId(
         $id,
         bool $withRoot,
         ? int $limit
     ) : int {
+        /**
+        * @psalm-var TDbObj
+        */
         $object = $this->RecallDaftObject($id);
 
         return
@@ -119,7 +152,11 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
     }
 
     /**
-    * @return array<int, DaftNestedObject>
+    * {@inheritdoc}
+    *
+    * @psalm-param TDbObj $leaf
+    *
+    * @psalm-return array<int, TDbObj>
     */
     public function RecallDaftNestedObjectPathToObject(
         DaftNestedObject $leaf,
@@ -134,6 +171,11 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         );
     }
 
+    /**
+    * {@inheritdoc}
+    *
+    * @psalm-param TDbObj $leaf
+    */
     public function CountDaftNestedObjectPathToObject(
         DaftNestedObject $leaf,
         bool $includeLeaf
@@ -148,9 +190,9 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
     }
 
     /**
-    * @param mixed $id
+    * {@inheritdoc}
     *
-    * @return array<int, DaftNestedObject>
+    * @psalm-return array<int, TDbObj>
     */
     public function RecallDaftNestedObjectPathToId($id, bool $includeLeaf) : array
     {
@@ -163,7 +205,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
     }
 
     /**
-    * @param mixed $id
+    * {@inheritdoc}
     */
     public function CountDaftNestedObjectPathToId($id, bool $includeLeaf) : int
     {
@@ -173,55 +215,6 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
             ($object instanceof DaftNestedObject)
                 ? $this->CountDaftNestedObjectPathToObject($object, $includeLeaf)
                 : self::DEFAULT_COUNT_IF_NOT_OBJECT;
-    }
-
-    /**
-    * {@inheritdoc}
-    */
-    public static function DaftObjectRepositoryByType(
-        string $type,
-        ...$args
-    ) : DaftObjectRepository {
-        /**
-        * @var EasyDB|null
-        */
-        $db = array_shift($args) ?: null;
-
-        if (is_a(static::class, DaftNestedWriteableObjectTree::class, true)) {
-            if ( ! is_a($type, DaftNestedWriteableObject::class, true)) {
-                throw new DaftObjectRepositoryTypeByClassMethodAndTypeException(
-                    1,
-                    static::class,
-                    __FUNCTION__,
-                    DaftNestedWriteableObject::class,
-                    $type
-                );
-            }
-        } elseif ( ! is_a($type, DaftNestedObject::class, true)) {
-            throw new DaftObjectRepositoryTypeByClassMethodAndTypeException(
-                1,
-                static::class,
-                __FUNCTION__,
-                DaftNestedObject::class,
-                $type
-            );
-        }
-
-        return parent::DaftObjectRepositoryByType($type, $db, ...$args);
-    }
-
-    public function RememberDaftObjectData(
-        DefinesOwnIdPropertiesInterface $object,
-        bool $assumeDoesNotExist = false
-    ) : void {
-        NestedTypeParanoia::ThrowIfNotNestedType(
-            $object,
-            self::INT_ARG_INDEX_FIRST,
-            static::class,
-            __FUNCTION__
-        );
-
-        parent::RememberDaftObjectData($object, $assumeDoesNotExist);
     }
 
     final protected function SelectingQueryDaftNestedObjectTreeFromArgs(bool $recall) : string
@@ -314,7 +307,9 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
     }
 
     /**
-    * @return array<int, DaftNestedObject>
+    * {@inheritdoc}
+    *
+    * @psalm-return array<int, TDbObj>
     */
     protected function RecallDaftNestedObjectTreeFromArgs(
         ? int $left,
@@ -334,6 +329,8 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
 
         /**
         * @var array<int, DaftNestedObject>
+        *
+        * @psalm-var array<int, TDbObj>
         */
         $out = array_filter(
             array_map([$this, 'RecallDaftObject'], (array) $sth->fetchAll(PDO::FETCH_NUM)),

@@ -16,6 +16,11 @@ use SignpostMarv\DaftObject\AbstractDaftObjectEasyDBTree;
 use SignpostMarv\DaftObject\DefinesOwnIdPropertiesInterface;
 use SignpostMarv\DaftObject\TraitDaftNestedObjectIntTree;
 
+/**
+* @template TDbObj as DaftNestedObject
+*
+* @template-extends AbstractDaftObjectEasyDBTree<TDbObj>
+*/
 class TestObjectRepository extends AbstractDaftObjectEasyDBTree
 {
     use TraitDaftNestedObjectIntTree;

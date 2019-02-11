@@ -11,17 +11,31 @@ namespace SignpostMarv\DaftObject\DaftNestedDbObject\Tests\Fixtures;
 use SignpostMarv\DaftObject\DaftNestedWriteableObject;
 use SignpostMarv\DaftObject\DaftNestedWriteableObjectTree;
 use SignpostMarv\DaftObject\DaftObjectRepositoryTypeByClassMethodAndTypeException;
-use SignpostMarv\DaftObject\TraitRememberDaftObject;
-use SignpostMarv\DaftObject\TraitWriteableTree;
+use SignpostMarv\DaftObject\TraitDaftNestedObjectIntTree;
+use SignpostMarv\DaftObject\WriteableTreeTrait;
 
+/**
+* @template TDbObj as DaftNestedWriteableObject
+*
+* @template-extends TestObjectRepository<TDbObj>
+*
+* @template-implements DaftNestedWriteableObjectTree<TDbObj>
+*/
 class TestObjectWriteableRepository
     extends
         TestObjectRepository
     implements
         DaftNestedWriteableObjectTree
 {
-    use TraitRememberDaftObject;
-    use TraitWriteableTree;
+    /**
+    * @use WriteableTreeTrait<TDbObj>
+    */
+    use WriteableTreeTrait;
+
+    public function GetNestedObjectTreeRootId() : int
+    {
+        return 0;
+    }
 
     /**
     * @param DaftObject|string $object
