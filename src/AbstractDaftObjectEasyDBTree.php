@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject;
 
-use ParagonIE\EasyDB\EasyDB;
 use PDO;
 use PDOStatement;
 
