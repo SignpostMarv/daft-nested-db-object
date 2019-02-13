@@ -13,6 +13,7 @@ use SignpostMarv\DaftObject\DaftNestedWriteableObjectTree;
 use SignpostMarv\DaftObject\DaftObjectRepositoryTypeByClassMethodAndTypeException;
 use SignpostMarv\DaftObject\TraitDaftNestedObjectIntTree;
 use SignpostMarv\DaftObject\WriteableTreeTrait;
+use SignpostMarv\DaftObject\EasyDB\WriteableTreeTrait as EasyDBWriteableTreeTrait;
 
 /**
 * @template TDbObj as DaftNestedWriteableObject
@@ -31,6 +32,11 @@ class TestObjectWriteableRepository
     * @use WriteableTreeTrait<TDbObj>
     */
     use WriteableTreeTrait;
+
+    /**
+    * @use EasyDBWriteableTreeTrait<TDbObj>
+    */
+    use EasyDBWriteableTreeTrait;
 
     public function GetNestedObjectTreeRootId() : int
     {
