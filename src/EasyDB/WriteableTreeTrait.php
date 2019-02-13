@@ -11,12 +11,27 @@ namespace SignpostMarv\DaftObject\EasyDB;
 use PDO;
 use SignpostMarv\DaftObject\DaftNestedWriteableObject;
 use SignpostMarv\DaftObject\DefinesOwnArrayIdInterface;
+use SignpostMarv\DaftObject\SuitableForRepositoryType;
 
 /**
 * @template T as DaftNestedWriteableObject
 */
 trait WriteableTreeTrait
 {
+    abstract protected function DaftObjectDatabaseTable() : string;
+
+    /**
+    * @param scalar|(scalar|array|object|null)[] $id
+    *
+    * @psalm-param class-string<T> $type
+    *
+    * @psalm-return T
+    */
+    abstract public function RecallDaftObjectOrThrow(
+        $id,
+        string $type = SuitableForRepositoryType::class
+    ) : SuitableForRepositoryType;
+
     protected function ObtainLastLeafInTree() : DaftNestedWriteableObject
     {
         /**
