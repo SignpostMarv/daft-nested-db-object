@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "735a3340538fe4c898753308229a0efc",
+    "content-hash": "877e75f32ab559e468fb536ddb28d14e",
     "packages": [
         {
             "name": "paragonie/corner",
@@ -5116,16 +5116,16 @@
         },
         {
             "name": "vimeo/psalm",
-            "version": "dev-master",
+            "version": "3.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "c66802c2fa16498017375a8a8a94c487bac27cd6"
+                "reference": "c310a2dd86660944b3f15fb8486ab73d45066618"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/c66802c2fa16498017375a8a8a94c487bac27cd6",
-                "reference": "c66802c2fa16498017375a8a8a94c487bac27cd6",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/c310a2dd86660944b3f15fb8486ab73d45066618",
+                "reference": "c310a2dd86660944b3f15fb8486ab73d45066618",
                 "shasum": ""
             },
             "require": {
@@ -5190,7 +5190,7 @@
                 "inspection",
                 "php"
             ],
-            "time": "2019-02-11T17:08:29+00:00"
+            "time": "2019-02-11T23:39:19+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -5340,8 +5340,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "roave/security-advisories": 20,
-        "vimeo/psalm": 20
+        "roave/security-advisories": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
