@@ -16,9 +16,9 @@
                 "SignpostMarv\\DaftObject\\AbstractDaftObjectEasyDBTree::RecallDaftNestedObjectTreeWithId"
             ]
         },
-        "MethodCallRemoval": {
+        "LogicalAnd": {
             "ignore": [
-                "SignpostMarv\\DaftObject\\AbstractDaftObjectEasyDBTree::RememberDaftObjectData"
+                "SignpostMarv\\DaftObject\\EasyDB\\WriteableTreeTrait::ObtainLastLeafInTree"
             ]
         },
         "Plus": {
@@ -33,7 +33,8 @@
                 "SignpostMarv\\DaftObject\\AbstractDaftObjectEasyDBTree::LeftOpRightOpDaftNestedObjectTreeFromArgs",
                 "SignpostMarv\\DaftObject\\AbstractDaftObjectEasyDBTree::QueryDaftNestedObjectTreeFromArgs",
                 "SignpostMarv\\DaftObject\\AbstractDaftObjectEasyDBTree::RecallDaftNestedObjectTreeFromArgs",
-                "SignpostMarv\\DaftObject\\AbstractDaftObjectEasyDBTree::SelectingQueryDaftNestedObjectTreeFromArgs"
+                "SignpostMarv\\DaftObject\\AbstractDaftObjectEasyDBTree::SelectingQueryDaftNestedObjectTreeFromArgs",
+                "SignpostMarv\\DaftObject\\EasyDB\\WriteableTreeTrait::ObtainLastLeafInTree"
             ]
         }
     }
