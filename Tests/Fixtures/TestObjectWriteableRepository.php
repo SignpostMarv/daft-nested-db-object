@@ -45,6 +45,10 @@ class TestObjectWriteableRepository
 
     /**
     * @param DaftObject|string $object
+    *
+    * @psalm-param TDbObj|string $object
+    *
+    * @psalm-param class-string<TDbObj> $type
     */
     protected static function ThrowIfNotType(
         $object,

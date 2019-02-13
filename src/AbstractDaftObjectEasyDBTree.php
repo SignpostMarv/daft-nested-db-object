@@ -131,9 +131,6 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         bool $withRoot,
         ? int $limit
     ) : int {
-        /**
-        * @psalm-var TDbObj
-        */
         $object = $this->RecallDaftObject($id);
 
         return
@@ -219,9 +216,6 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
     final protected function SelectingQueryDaftNestedObjectTreeFromArgs(bool $recall) : string
     {
         if ($recall) {
-            /**
-            * @var string[]
-            */
             $props = $this->type::DaftObjectIdProperties();
 
             return implode(', ', array_map(
