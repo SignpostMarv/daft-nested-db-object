@@ -18,8 +18,6 @@ use SignpostMarv\DaftObject\SuitableForRepositoryType;
 */
 trait WriteableTreeTrait
 {
-    abstract protected function DaftObjectDatabaseTable() : string;
-
     /**
     * @param scalar|(scalar|array|object|null)[] $id
     *
@@ -31,6 +29,8 @@ trait WriteableTreeTrait
         $id,
         string $type = SuitableForRepositoryType::class
     ) : SuitableForRepositoryType;
+
+    abstract protected function DaftObjectDatabaseTable() : string;
 
     protected function ObtainLastLeafInTree() : DaftNestedWriteableObject
     {
