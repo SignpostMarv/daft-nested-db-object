@@ -18,14 +18,20 @@
         "psr-4": {
             "SignpostMarv\\DaftMagicPropertyAnalysis\\": "./vendor/signpostmarv/daft-magic-property-analysis/src/",
             "SignpostMarv\\DaftMagicPropertyAnalysis\\PHPStan\\": "./vendor/signpostmarv/daft-magic-property-analysis/PHPStan/",
-            "SignpostMarv\\DaftObject\\": "./vendor/signpostmarv/daft-object/tests-src/",
+            "SignpostMarv\\DaftObject\\": [
+                "./vendor/signpostmarv/daft-object/tests-src/",
+                "./vendor/signpostmarv/daft-object-repository/tests-src/"
+            ],
             "SignpostMarv\\DaftObject\\DaftNestedObject\\PHPStan\\": "./vendor/signpostmarv/daft-nested-object/PHPStan/",
             "SignpostMarv\\DaftObject\\DaftNestedDbObject\\Tests\\": "./Tests/",
             "SignpostMarv\\DaftObject\\DaftNestedObject\\Tests\\": "./vendor/signpostmarv/daft-nested-object/Tests/",
             "SignpostMarv\\DaftObject\\EasyDB\\": "./vendor/signpostmarv/daft-db-object/easydb-src/",
             "SignpostMarv\\DaftObject\\EasyDB\\Tests\\": "./vendor/signpostmarv/daft-db-object/easydb-tests/",
             "SignpostMarv\\DaftObject\\PHPStan\\": "./vendor/signpostmarv/daft-object/PHPStan/",
-            "SignpostMarv\\DaftObject\\Tests\\": "./vendor/signpostmarv/daft-object/Tests/"
+            "SignpostMarv\\DaftObject\\Tests\\": [
+                "./vendor/signpostmarv/daft-object/Tests/",
+                "./vendor/signpostmarv/daft-object-repository/Tests/"
+            ]
         }
     },
     "config": {
@@ -59,9 +65,10 @@
         "ext-PDO": "*",
         "ext-mbstring": "*",
         "paragonie/easydb": "^2.6",
-        "signpostmarv/daft-db-object": "^1.5",
-        "signpostmarv/daft-nested-object": "^1.3",
-        "signpostmarv/daft-object": "^1.14"
+        "signpostmarv/daft-db-object": "^1.6",
+        "signpostmarv/daft-nested-object": "^1.4",
+        "signpostmarv/daft-object": "^1.15",
+        "signpostmarv/daft-object-repository": "^0.1.0"
     },
     "require-dev": {
         "infection/infection": "^0.12.2",
