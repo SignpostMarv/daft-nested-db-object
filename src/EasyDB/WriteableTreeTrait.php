@@ -72,6 +72,8 @@ trait WriteableTreeTrait
         }
 
         /**
+        * @var DaftNestedWriteableObject
+        *
         * @psalm-var T
         */
         $out = $this->RecallDaftObjectOrThrow($res);
