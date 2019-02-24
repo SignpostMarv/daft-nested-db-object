@@ -326,7 +326,15 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
         * @psalm-var array<int, TDbObj>
         */
         $out = array_filter(
-            array_map([$this, 'RecallDaftObject'], (array) $sth->fetchAll(PDO::FETCH_NUM)),
+            array_map(
+                /**
+                * @param array<int, scalar|null> $id
+                */
+                function (array $id) : ? DaftObject {
+                    return $this->RecallDaftObject($id);
+                },
+                (array) $sth->fetchAll(PDO::FETCH_NUM)
+            ),
             function (? DaftObject $maybe) : bool {
                 return $maybe instanceof DaftNestedObject;
             }
