@@ -32,6 +32,9 @@ trait WriteableTreeTrait
 
     abstract protected function DaftObjectDatabaseTable() : string;
 
+    /**
+    * @psalm-return T
+    */
     protected function ObtainLastLeafInTree() : DaftNestedWriteableObject
     {
         /**
@@ -59,12 +62,20 @@ trait WriteableTreeTrait
 
         $sth->execute();
 
+        /**
+        * @var array<string, scalar>
+        */
         $res = $sth->fetch(PDO::FETCH_ASSOC);
 
         if (1 === count($res) && ! is_a($type, DefinesOwnArrayIdInterface::class, true)) {
             $res = current($res);
         }
 
-        return $this->RecallDaftObjectOrThrow($res);
+        /**
+        * @psalm-var T
+        */
+        $out = $this->RecallDaftObjectOrThrow($res);
+
+        return $out;
     }
 }

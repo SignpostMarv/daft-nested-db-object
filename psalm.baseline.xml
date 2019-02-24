@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files/>
+<files>
+  <file src="Tests\CoverageTest.php">
+    <InvalidTemplateParam occurrences="2"/>
+    <UnusedClass occurrences="1">
+      <code>class CoverageTest extends Base</code>
+    </UnusedClass>
+  </file>
+</files>

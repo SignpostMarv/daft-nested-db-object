@@ -13,6 +13,7 @@ use ReflectionClass;
 use ReflectionType;
 use RuntimeException;
 use SignpostMarv\DaftObject\AbstractDaftObjectEasyDBTree;
+use SignpostMarv\DaftObject\DaftNestedObject;
 use SignpostMarv\DaftObject\DefinesOwnIdPropertiesInterface;
 use SignpostMarv\DaftObject\TraitDaftNestedObjectIntTree;
 
@@ -25,10 +26,19 @@ class TestObjectRepository extends AbstractDaftObjectEasyDBTree
 {
     use TraitDaftNestedObjectIntTree;
 
+    /**
+    * @var int
+    */
     static $counts = 0;
 
+    /**
+    * @var int
+    */
     protected $count = 0;
 
+    /**
+    * @psalm-param class-string<TDbObj> $type
+    */
     protected function __construct(string $type, EasyDB $db)
     {
         parent::__construct($type, $db);
@@ -49,7 +59,7 @@ class TestObjectRepository extends AbstractDaftObjectEasyDBTree
         $ref = new ReflectionClass($type);
         $nullables = $type::DaftObjectNullableProperties();
 
-        foreach ($type::DaftObjectProperties() as $i => $prop) {
+        foreach ($type::DaftObjectProperties() as $prop) {
             $methodName = 'Get' . ucfirst($prop);
 
             if (true === $ref->hasMethod($methodName)) {
