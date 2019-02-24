@@ -113,12 +113,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-db-object.git",
-                "reference": "259f2c1eb7e4e1fbb3beab62e67214c3d19e5f22"
+                "reference": "2418cd2074cd99b19aa4941a7934d93b34469e76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-db-object/zipball/259f2c1eb7e4e1fbb3beab62e67214c3d19e5f22",
-                "reference": "259f2c1eb7e4e1fbb3beab62e67214c3d19e5f22",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-db-object/zipball/2418cd2074cd99b19aa4941a7934d93b34469e76",
+                "reference": "2418cd2074cd99b19aa4941a7934d93b34469e76",
                 "shasum": ""
             },
             "require": {
@@ -159,7 +159,7 @@
                 }
             ],
             "description": "Daft Object with database repositories",
-            "time": "2019-02-23T19:44:20+00:00"
+            "time": "2019-02-24T09:16:37+00:00"
         },
         {
             "name": "signpostmarv/daft-magic-property-analysis",
@@ -217,12 +217,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-nested-object.git",
-                "reference": "25b6241530fcf88f5c77e7da512f11d3e6630439"
+                "reference": "b8410744ad4244750ad9da42d2f7e4dc04a4aa3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-nested-object/zipball/25b6241530fcf88f5c77e7da512f11d3e6630439",
-                "reference": "25b6241530fcf88f5c77e7da512f11d3e6630439",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-nested-object/zipball/b8410744ad4244750ad9da42d2f7e4dc04a4aa3e",
+                "reference": "b8410744ad4244750ad9da42d2f7e4dc04a4aa3e",
                 "shasum": ""
             },
             "require": {
@@ -238,6 +238,7 @@
                 "phpstan/phpstan-strict-rules": "^0.11.0",
                 "phpunit/phpunit": "^7.5",
                 "povils/phpmnd": "^2.1",
+                "psalm/plugin-phpunit": "^0.4.1",
                 "roave/security-advisories": "dev-master",
                 "sebastian/phpcpd": "^4.1",
                 "signpostmarv/php-cs-fixer-config": "^0.9.0",
@@ -260,7 +261,7 @@
                 }
             ],
             "description": "nested sets implementation for daft object",
-            "time": "2019-02-23T22:05:20+00:00"
+            "time": "2019-02-24T09:45:38+00:00"
         },
         {
             "name": "signpostmarv/daft-object",
@@ -322,12 +323,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-object-repository.git",
-                "reference": "c27a3ff41912196bf9955fdbb981752868a5b7f4"
+                "reference": "5ff17abc91c29f16125d2f436144b97150bd8ccb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-object-repository/zipball/c27a3ff41912196bf9955fdbb981752868a5b7f4",
-                "reference": "c27a3ff41912196bf9955fdbb981752868a5b7f4",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-object-repository/zipball/5ff17abc91c29f16125d2f436144b97150bd8ccb",
+                "reference": "5ff17abc91c29f16125d2f436144b97150bd8ccb",
                 "shasum": ""
             },
             "require": {
@@ -368,7 +369,7 @@
                 }
             ],
             "description": "Daft Object Repository",
-            "time": "2019-02-23T21:46:04+00:00"
+            "time": "2019-02-24T08:51:31+00:00"
         }
     ],
     "packages-dev": [
