@@ -63,10 +63,10 @@
         "ext-PDO": "*",
         "ext-mbstring": "*",
         "paragonie/easydb": "^2.6",
-        "signpostmarv/daft-db-object": "dev-master",
-        "signpostmarv/daft-nested-object": "dev-master",
-        "signpostmarv/daft-object": "dev-master",
-        "signpostmarv/daft-object-repository": "dev-master"
+        "signpostmarv/daft-db-object": "^2.0",
+        "signpostmarv/daft-nested-object": "^2.0",
+        "signpostmarv/daft-object": "^2.0",
+        "signpostmarv/daft-object-repository": "^1.0"
     },
     "require-dev": {
         "infection/infection": "^0.12.2",
