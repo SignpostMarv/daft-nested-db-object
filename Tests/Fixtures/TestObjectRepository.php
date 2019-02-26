@@ -29,7 +29,7 @@ class TestObjectRepository extends AbstractDaftObjectEasyDBTree
     /**
     * @var int
     */
-    static $counts = 0;
+    public static $counts = 0;
 
     /**
     * @var int
@@ -48,7 +48,7 @@ class TestObjectRepository extends AbstractDaftObjectEasyDBTree
         $this->count = self::$counts;
 
         /**
-        * @var DefinesOwnIdPropertiesInterface $type
+        * @var DefinesOwnIdPropertiesInterface
         */
         $type = $type;
 
@@ -64,7 +64,7 @@ class TestObjectRepository extends AbstractDaftObjectEasyDBTree
 
             if (true === $ref->hasMethod($methodName)) {
                 /**
-                * @var ReflectionType $refReturn
+                * @var ReflectionType
                 */
                 $refReturn = $ref->getMethod($methodName)->getReturnType();
 

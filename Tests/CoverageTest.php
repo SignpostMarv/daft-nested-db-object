@@ -8,19 +8,11 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\DaftNestedDbObject\Tests;
 
-use BadMethodCallException;
 use Generator;
-use InvalidArgumentException;
 use ParagonIE\EasyDB\Factory;
-use RuntimeException;
 use SignpostMarv\DaftObject\DaftNestedObject\Tests\CoverageTest as Base;
 use SignpostMarv\DaftObject\DaftNestedObject\Tests\Fixtures\DaftNestedIntObject;
 use SignpostMarv\DaftObject\DaftNestedObject\Tests\Fixtures\DaftNestedWriteableIntObject;
-use SignpostMarv\DaftObject\DaftNestedObject;
-use SignpostMarv\DaftObject\DaftNestedObjectTree;
-use SignpostMarv\DaftObject\DaftNestedWriteableObject;
-use SignpostMarv\DaftObject\DaftNestedWriteableObjectTree;
-use SignpostMarv\DaftObject\TraitWriteableTree;
 
 class CoverageTest extends Base
 {

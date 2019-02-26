@@ -10,9 +10,9 @@ namespace SignpostMarv\DaftObject\DaftNestedDbObject\Tests\Fixtures;
 
 use SignpostMarv\DaftObject\DaftNestedWriteableObject;
 use SignpostMarv\DaftObject\DaftNestedWriteableObjectTree;
+use SignpostMarv\DaftObject\EasyDB\WriteableTreeTrait as EasyDBWriteableTreeTrait;
 use SignpostMarv\DaftObject\TraitDaftNestedObjectIntTree;
 use SignpostMarv\DaftObject\WriteableTreeTrait;
-use SignpostMarv\DaftObject\EasyDB\WriteableTreeTrait as EasyDBWriteableTreeTrait;
 
 /**
 * @template TDbObj as DaftNestedWriteableObject
@@ -21,11 +21,7 @@ use SignpostMarv\DaftObject\EasyDB\WriteableTreeTrait as EasyDBWriteableTreeTrai
 *
 * @template-implements DaftNestedWriteableObjectTree<TDbObj>
 */
-class TestObjectWriteableRepository
-    extends
-        TestObjectRepository
-    implements
-        DaftNestedWriteableObjectTree
+class TestObjectWriteableRepository extends TestObjectRepository implements DaftNestedWriteableObjectTree
 {
     /**
     * @use WriteableTreeTrait<TDbObj>
