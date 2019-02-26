@@ -10,5 +10,6 @@ namespace SignpostMarv\DaftObject\CS;
 
 return ConfigUsedWithStaticAnalysis::createWithPaths(...[
     __FILE__,
-    (__DIR__ . '/src/'),
+    __DIR__ . '/src/',
+    __DIR__ . '/Tests/',
 ]);
