@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files>
   <file src="Tests\CoverageTest.php">
+    <ImplementedReturnTypeMismatch occurrences="2">
+      <code>@return Generator&lt;int, Fixtures\TestObjectRepository, mixed, void&gt;</code>
+      <code>@return Generator&lt;int, Fixtures\TestObjectWriteableRepository, mixed, void&gt;</code>
+    </ImplementedReturnTypeMismatch>
+    <InvalidReturnType occurrences="2">
+      <code>@return Generator&lt;int, Fixtures\TestObjectRepository, mixed, void&gt;</code>
+      <code>@return Generator&lt;int, Fixtures\TestObjectWriteableRepository, mixed, void&gt;</code>
+    </InvalidReturnType>
     <InvalidTemplateParam occurrences="2"/>
+    <UnusedClass occurrences="1">
+      <code>class CoverageTest extends Base</code>
+    </UnusedClass>
+  </file>
+  <file src="Tests\WriteableNestedTreeTest.php">
+    <LessSpecificImplementedReturnType occurrences="1">
+      <code>string</code>
+    </LessSpecificImplementedReturnType>
+  </file>
+  <file src="src\AbstractDaftObjectEasyDBTree.php">
+    <LessSpecificImplementedReturnType occurrences="3">
+      <code>@psalm-return array&lt;int, TDbObj&gt;</code>
+      <code>@psalm-return array&lt;int, TDbObj&gt;</code>
+      <code>@psalm-return array&lt;int, TDbObj&gt;</code>
+    </LessSpecificImplementedReturnType>
   </file>
 </files>
