@@ -16,8 +16,14 @@ use SignpostMarv\DaftObject\DaftNestedObject\Tests\Fixtures\DaftNestedWriteableI
 
 class CoverageTest extends Base
 {
+    /**
+    * @return Generator<int, Fixtures\TestObjectRepository, mixed, void>
+    */
     public function DataProviderCoverageNonWriteableRepo() : Generator
     {
+        /**
+        * @var Fixtures\TestObjectRepository
+        */
         $repo = Fixtures\TestObjectRepository::DaftObjectRepositoryByType(
             DaftNestedIntObject::class,
             Factory::create('sqlite::memory:')
@@ -26,8 +32,14 @@ class CoverageTest extends Base
         yield [$repo];
     }
 
+    /**
+    * @return Generator<int, Fixtures\TestObjectWriteableRepository, mixed, void>
+    */
     public function DataProviderCoverageWriteableRepo() : Generator
     {
+        /**
+        * @var Fixtures\TestObjectWriteableRepository
+        */
         $repo = Fixtures\TestObjectWriteableRepository::DaftObjectRepositoryByType(
             DaftNestedWriteableIntObject::class,
             Factory::create('sqlite::memory:')

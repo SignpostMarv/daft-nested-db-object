@@ -59,6 +59,8 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
     * {@inheritdoc}
     *
     * @psalm-param TDbObj $root
+    *
+    * @psalm-return array<int, TDbObj>
     */
     public function RecallDaftNestedObjectTreeWithObject(
         DaftNestedObject $root,
