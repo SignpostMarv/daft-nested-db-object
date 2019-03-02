@@ -12,6 +12,7 @@
         "@default": true,
         "CastArray": {
             "ignore": [
+                "SignpostMarv\\DaftObject\\AbstractDaftObjectEasyDBTree::CountDaftNestedObjectTreeWithId",
                 "SignpostMarv\\DaftObject\\AbstractDaftObjectEasyDBTree::RecallDaftNestedObjectTreeFromArgs",
                 "SignpostMarv\\DaftObject\\AbstractDaftObjectEasyDBTree::RecallDaftNestedObjectTreeWithId"
             ]
