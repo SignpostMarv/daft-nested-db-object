@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1adbd8b8ab4383553c6402eeb54d4d2",
+    "content-hash": "b68e9bdcad035ab921b74d5cfa7d7f14",
     "packages": [
         {
             "name": "paragonie/corner",
@@ -109,24 +109,24 @@
         },
         {
             "name": "signpostmarv/daft-db-object",
-            "version": "v2.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-db-object.git",
-                "reference": "e81d2c16f2df8bdbf80321e28a7681d2d0437c6d"
+                "reference": "48d25e99883a23c1da782fa3ba3210b0db50ab03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-db-object/zipball/e81d2c16f2df8bdbf80321e28a7681d2d0437c6d",
-                "reference": "e81d2c16f2df8bdbf80321e28a7681d2d0437c6d",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-db-object/zipball/48d25e99883a23c1da782fa3ba3210b0db50ab03",
+                "reference": "48d25e99883a23c1da782fa3ba3210b0db50ab03",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "paragonie/easydb": "^2.7",
                 "php": "^7.1",
-                "signpostmarv/daft-object": "^2.1",
-                "signpostmarv/daft-object-repository": "^1.1"
+                "signpostmarv/daft-object": "dev-master",
+                "signpostmarv/daft-object-repository": "dev-master"
             },
             "require-dev": {
                 "infection/infection": "^0.12.2",
@@ -136,7 +136,7 @@
                 "phpstan/phpstan-strict-rules": "^0.11.0",
                 "phpunit/phpunit": "^7.5",
                 "povils/phpmnd": "^2.1",
-                "psalm/plugin-phpunit": "^0.4.1",
+                "psalm/plugin-phpunit": "^0.5.1",
                 "roave/security-advisories": "dev-master",
                 "sebastian/phpcpd": "^4.1",
                 "signpostmarv/php-cs-fixer-config": "^0.9.0",
@@ -159,7 +159,7 @@
                 }
             ],
             "description": "Daft Object with database repositories",
-            "time": "2019-02-26T00:09:09+00:00"
+            "time": "2019-03-02T21:29:47+00:00"
         },
         {
             "name": "signpostmarv/daft-magic-property-analysis",
@@ -213,22 +213,22 @@
         },
         {
             "name": "signpostmarv/daft-nested-object",
-            "version": "v2.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-nested-object.git",
-                "reference": "c60b29440fc1d726c33454914c34f95fded5e20c"
+                "reference": "391aa3f83da0f4e83822ac3b17865b3c3a6dd820"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-nested-object/zipball/c60b29440fc1d726c33454914c34f95fded5e20c",
-                "reference": "c60b29440fc1d726c33454914c34f95fded5e20c",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-nested-object/zipball/391aa3f83da0f4e83822ac3b17865b3c3a6dd820",
+                "reference": "391aa3f83da0f4e83822ac3b17865b3c3a6dd820",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1",
-                "signpostmarv/daft-object": "^2.1",
-                "signpostmarv/daft-object-repository": "^1.1"
+                "signpostmarv/daft-object": "dev-master",
+                "signpostmarv/daft-object-repository": "dev-master"
             },
             "require-dev": {
                 "infection/infection": "^0.12.2",
@@ -238,7 +238,7 @@
                 "phpstan/phpstan-strict-rules": "^0.11.0",
                 "phpunit/phpunit": "^7.5",
                 "povils/phpmnd": "^2.1",
-                "psalm/plugin-phpunit": "^0.4.1",
+                "psalm/plugin-phpunit": "dev-variadic-tests",
                 "roave/security-advisories": "dev-master",
                 "sebastian/phpcpd": "^4.1",
                 "signpostmarv/php-cs-fixer-config": "^0.9.0",
@@ -261,23 +261,24 @@
                 }
             ],
             "description": "nested sets implementation for daft object",
-            "time": "2019-02-26T00:30:00+00:00"
+            "time": "2019-03-02T21:06:59+00:00"
         },
         {
             "name": "signpostmarv/daft-object",
-            "version": "v2.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-object.git",
-                "reference": "f1b7ddbdd1eb29784c73f006eb65ae9656b30993"
+                "reference": "8d4f99abff1ebd32ed346f2717921da25d6b7373"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-object/zipball/f1b7ddbdd1eb29784c73f006eb65ae9656b30993",
-                "reference": "f1b7ddbdd1eb29784c73f006eb65ae9656b30993",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-object/zipball/8d4f99abff1ebd32ed346f2717921da25d6b7373",
+                "reference": "8d4f99abff1ebd32ed346f2717921da25d6b7373",
                 "shasum": ""
             },
             "require": {
+                "ext-ctype": "*",
                 "ext-json": "*",
                 "ext-mbstring": "*",
                 "php": "^7.1,>=7.1.3",
@@ -290,10 +291,9 @@
                 "phpstan/phpstan": "^0.11.2",
                 "phpstan/phpstan-phpunit": "^0.11.0",
                 "phpstan/phpstan-strict-rules": "^0.11.0",
-                "phpunit/phpcov": "^5.0",
                 "phpunit/phpunit": "^7.5",
                 "povils/phpmnd": "^2.1",
-                "psalm/plugin-phpunit": "^0.4.1",
+                "psalm/plugin-phpunit": "^0.5.1",
                 "roave/security-advisories": "dev-master",
                 "sebastian/phpcpd": "^4.1",
                 "signpostmarv/php-cs-fixer-config": "^0.9.0",
@@ -316,20 +316,20 @@
                 }
             ],
             "description": "Daft Object",
-            "time": "2019-02-25T23:41:09+00:00"
+            "time": "2019-03-02T16:50:41+00:00"
         },
         {
             "name": "signpostmarv/daft-object-repository",
-            "version": "v1.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-object-repository.git",
-                "reference": "f00e576f0426911fd2f5d77945ad1b40b506324e"
+                "reference": "24ab9e34f41b8708350fbaf97e37a0fc7d1e9dd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-object-repository/zipball/f00e576f0426911fd2f5d77945ad1b40b506324e",
-                "reference": "f00e576f0426911fd2f5d77945ad1b40b506324e",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-object-repository/zipball/24ab9e34f41b8708350fbaf97e37a0fc7d1e9dd5",
+                "reference": "24ab9e34f41b8708350fbaf97e37a0fc7d1e9dd5",
                 "shasum": ""
             },
             "require": {
@@ -337,7 +337,7 @@
                 "ext-mbstring": "*",
                 "php": "^7.1,>=7.1.3",
                 "signpostmarv/daft-magic-property-analysis": "^0.7.0",
-                "signpostmarv/daft-object": "^2.1",
+                "signpostmarv/daft-object": "dev-master",
                 "signpostmarv/sprintf-exception-factory": "^1.2"
             },
             "require-dev": {
@@ -348,7 +348,7 @@
                 "phpstan/phpstan-strict-rules": "^0.11.0",
                 "phpunit/phpunit": "^7.5",
                 "povils/phpmnd": "^2.1",
-                "psalm/plugin-phpunit": "^0.4.1",
+                "psalm/plugin-phpunit": "^0.5.1",
                 "roave/security-advisories": "dev-master",
                 "sebastian/phpcpd": "^4.1",
                 "signpostmarv/php-cs-fixer-config": "^0.9.0",
@@ -371,7 +371,7 @@
                 }
             ],
             "description": "Daft Object Repository",
-            "time": "2019-02-25T23:56:38+00:00"
+            "time": "2019-03-02T16:59:38+00:00"
         },
         {
             "name": "signpostmarv/sprintf-exception-factory",
@@ -5510,6 +5510,10 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "signpostmarv/daft-db-object": 20,
+        "signpostmarv/daft-nested-object": 20,
+        "signpostmarv/daft-object": 20,
+        "signpostmarv/daft-object-repository": 20,
         "roave/security-advisories": 20,
         "vimeo/psalm": 20
     },

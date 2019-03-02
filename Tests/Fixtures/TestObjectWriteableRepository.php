@@ -33,8 +33,5 @@ class TestObjectWriteableRepository extends TestObjectRepository implements Daft
     */
     use EasyDBWriteableTreeTrait;
 
-    public function GetNestedObjectTreeRootId() : int
-    {
-        return 0;
-    }
+    use TraitDaftNestedObjectIntTree;
 }

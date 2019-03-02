@@ -62,6 +62,10 @@ class TestObjectRepository extends AbstractDaftObjectEasyDBTree
         foreach ($type::DaftObjectProperties() as $prop) {
             $methodName = 'Get' . ucfirst($prop);
 
+            if ('GetDaftNestedObjectParentId' === $methodName) {
+                continue;
+            }
+
             if (true === $ref->hasMethod($methodName)) {
                 /**
                 * @var ReflectionType

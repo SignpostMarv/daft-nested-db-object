@@ -115,7 +115,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
                     $limit
                 )
                 : (
-                    ((array) $id === (array) $this->GetNestedObjectTreeRootId())
+                    ((array) $id === $this->GetNestedObjectTreeRootId())
                         ? $this->RecallDaftNestedObjectFullTree(self::INT_LIMIT_ZERO)
                         : []
                 );
@@ -141,7 +141,7 @@ abstract class AbstractDaftObjectEasyDBTree extends AbstractDaftObjectEasyDBRepo
                     $limit
                 )
                 : (
-                    ((array) $id === (array) $this->GetNestedObjectTreeRootId())
+                    ((array) $id === $this->GetNestedObjectTreeRootId())
                         ? $this->CountDaftNestedObjectFullTree($limit)
                         : self::DEFAULT_COUNT_IF_NOT_OBJECT
                 );
