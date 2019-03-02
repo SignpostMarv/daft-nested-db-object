@@ -19,4 +19,4 @@
 
     <issueHandlers>
     </issueHandlers>
-</psalm>
+<plugins><pluginClass class="Psalm\PhpUnitPlugin\Plugin"/></plugins></psalm>
