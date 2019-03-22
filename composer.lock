@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8125b8ac0c21305532ce2710ebb772c8",
+    "content-hash": "c2fd3121d179e89198e11b3e6dffa263",
     "packages": [
         {
             "name": "paragonie/corner",
@@ -109,24 +109,24 @@
         },
         {
             "name": "signpostmarv/daft-db-object",
-            "version": "v2.2.0",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-db-object.git",
-                "reference": "948ef7857f969b86ab4711530c3b5f3217118ecf"
+                "reference": "3f232c014ad214be1f7414a5b0012a55e35098bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-db-object/zipball/948ef7857f969b86ab4711530c3b5f3217118ecf",
-                "reference": "948ef7857f969b86ab4711530c3b5f3217118ecf",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-db-object/zipball/3f232c014ad214be1f7414a5b0012a55e35098bb",
+                "reference": "3f232c014ad214be1f7414a5b0012a55e35098bb",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "paragonie/easydb": "^2.7",
                 "php": "^7.1",
-                "signpostmarv/daft-object": "^2.2",
-                "signpostmarv/daft-object-repository": "^1.2"
+                "signpostmarv/daft-object": "^2.3,>=2.3.4",
+                "signpostmarv/daft-object-repository": "^1.3"
             },
             "require-dev": {
                 "infection/infection": "^0.12.2",
@@ -159,7 +159,7 @@
                 }
             ],
             "description": "Daft Object with database repositories",
-            "time": "2019-03-02T22:58:52+00:00"
+            "time": "2019-03-22T19:17:36+00:00"
         },
         {
             "name": "signpostmarv/daft-magic-property-analysis",
@@ -213,22 +213,22 @@
         },
         {
             "name": "signpostmarv/daft-nested-object",
-            "version": "v2.2.0",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-nested-object.git",
-                "reference": "77f8316d40a7736fcaf60739f17106ef9212f91c"
+                "reference": "df2e7b2d91d5c25410c5043411ce35a25ecb8d8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-nested-object/zipball/77f8316d40a7736fcaf60739f17106ef9212f91c",
-                "reference": "77f8316d40a7736fcaf60739f17106ef9212f91c",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-nested-object/zipball/df2e7b2d91d5c25410c5043411ce35a25ecb8d8c",
+                "reference": "df2e7b2d91d5c25410c5043411ce35a25ecb8d8c",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1",
-                "signpostmarv/daft-object": "^2.2",
-                "signpostmarv/daft-object-repository": "^1.2"
+                "signpostmarv/daft-object": "^2.3,>=2.3.4",
+                "signpostmarv/daft-object-repository": "^1.3"
             },
             "require-dev": {
                 "infection/infection": "^0.12.2",
@@ -261,20 +261,20 @@
                 }
             ],
             "description": "nested sets implementation for daft object",
-            "time": "2019-03-02T23:03:04+00:00"
+            "time": "2019-03-22T20:02:49+00:00"
         },
         {
             "name": "signpostmarv/daft-object",
-            "version": "v2.2.0",
+            "version": "v2.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-object.git",
-                "reference": "8d4f99abff1ebd32ed346f2717921da25d6b7373"
+                "reference": "56b569862b9f1dd3126ffb9447cde88f09dea936"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-object/zipball/8d4f99abff1ebd32ed346f2717921da25d6b7373",
-                "reference": "8d4f99abff1ebd32ed346f2717921da25d6b7373",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-object/zipball/56b569862b9f1dd3126ffb9447cde88f09dea936",
+                "reference": "56b569862b9f1dd3126ffb9447cde88f09dea936",
                 "shasum": ""
             },
             "require": {
@@ -316,20 +316,20 @@
                 }
             ],
             "description": "Daft Object",
-            "time": "2019-03-02T16:50:41+00:00"
+            "time": "2019-03-21T18:05:18+00:00"
         },
         {
             "name": "signpostmarv/daft-object-repository",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-object-repository.git",
-                "reference": "dfdd76e709f233358f4ee68b5b123ef21d76ecc8"
+                "reference": "5d281cab3f9c8605c8f4f6a8d3306887297a2923"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-object-repository/zipball/dfdd76e709f233358f4ee68b5b123ef21d76ecc8",
-                "reference": "dfdd76e709f233358f4ee68b5b123ef21d76ecc8",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-object-repository/zipball/5d281cab3f9c8605c8f4f6a8d3306887297a2923",
+                "reference": "5d281cab3f9c8605c8f4f6a8d3306887297a2923",
                 "shasum": ""
             },
             "require": {
@@ -337,7 +337,7 @@
                 "ext-mbstring": "*",
                 "php": "^7.1,>=7.1.3",
                 "signpostmarv/daft-magic-property-analysis": "^0.7.0",
-                "signpostmarv/daft-object": "^2.2",
+                "signpostmarv/daft-object": "^2.3",
                 "signpostmarv/sprintf-exception-factory": "^1.2"
             },
             "require-dev": {
@@ -371,7 +371,7 @@
                 }
             ],
             "description": "Daft Object Repository",
-            "time": "2019-03-02T22:42:03+00:00"
+            "time": "2019-03-21T21:38:41+00:00"
         },
         {
             "name": "signpostmarv/sprintf-exception-factory",
@@ -2680,6 +2680,67 @@
             "time": "2017-07-14T14:27:02+00:00"
         },
         {
+            "name": "phpmyadmin/sql-parser",
+            "version": "v4.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpmyadmin/sql-parser.git",
+                "reference": "0eb16ef5e3acacbc792be336754e42d98791a33f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpmyadmin/sql-parser/zipball/0eb16ef5e3acacbc792be336754e42d98791a33f",
+                "reference": "0eb16ef5e3acacbc792be336754e42d98791a33f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/polyfill-mbstring": "^1.3"
+            },
+            "conflict": {
+                "phpmyadmin/motranslator": "<3.0"
+            },
+            "require-dev": {
+                "phpunit/php-code-coverage": "*",
+                "phpunit/phpunit": "~4.8 || ~5.7 || ~6.5",
+                "sami/sami": "^4.0"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance",
+                "phpmyadmin/motranslator": "Translate messages to your favorite locale"
+            },
+            "bin": [
+                "bin/highlight-query",
+                "bin/lint-query"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpMyAdmin\\SqlParser\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "The phpMyAdmin Team",
+                    "email": "developers@phpmyadmin.net",
+                    "homepage": "https://www.phpmyadmin.net/team/"
+                }
+            ],
+            "description": "A validating SQL lexer and parser with a focus on MySQL dialect.",
+            "homepage": "https://github.com/phpmyadmin/sql-parser",
+            "keywords": [
+                "analysis",
+                "lexer",
+                "parser",
+                "sql"
+            ],
+            "time": "2019-01-05T13:46:38+00:00"
+        },
+        {
             "name": "phpspec/prophecy",
             "version": "1.8.0",
             "source": {
@@ -4459,16 +4520,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.2.3",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "1f0ad51dfde4da8a6070f06adc58b4e37cbb37a4"
+                "reference": "9dc2299a016497f9ee620be94524e6c0af0280a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/1f0ad51dfde4da8a6070f06adc58b4e37cbb37a4",
-                "reference": "1f0ad51dfde4da8a6070f06adc58b4e37cbb37a4",
+                "url": "https://api.github.com/repos/symfony/console/zipball/9dc2299a016497f9ee620be94524e6c0af0280a9",
+                "reference": "9dc2299a016497f9ee620be94524e6c0af0280a9",
                 "shasum": ""
             },
             "require": {
@@ -4527,7 +4588,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-25T14:35:16+00:00"
+            "time": "2019-02-23T15:17:42+00:00"
         },
         {
             "name": "symfony/contracts",
@@ -4816,16 +4877,16 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.10.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19"
+                "reference": "82ebae02209c21113908c229e9883c419720738a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e3d826245268269cd66f8326bd8bc066687b4a19",
-                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/82ebae02209c21113908c229e9883c419720738a",
+                "reference": "82ebae02209c21113908c229e9883c419720738a",
                 "shasum": ""
             },
             "require": {
@@ -4837,7 +4898,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.11-dev"
                 }
             },
             "autoload": {
@@ -4870,20 +4931,20 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2018-08-06T14:22:27+00:00"
+            "time": "2019-02-06T07:57:58+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.10.0",
+            "version": "v1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
-                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
+                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
                 "shasum": ""
             },
             "require": {
@@ -4895,7 +4956,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.11-dev"
                 }
             },
             "autoload": {
@@ -4929,7 +4990,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-09-21T13:07:52+00:00"
+            "time": "2019-02-06T07:57:58+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
@@ -5285,16 +5346,16 @@
         },
         {
             "name": "vimeo/psalm",
-            "version": "dev-master",
+            "version": "3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "ef0abf1c30231f53382e6d5e30b4369b61e1c470"
+                "reference": "f0ddc6f3bc35ba7ecb99232903907a1d5ec1c8e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/ef0abf1c30231f53382e6d5e30b4369b61e1c470",
-                "reference": "ef0abf1c30231f53382e6d5e30b4369b61e1c470",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/f0ddc6f3bc35ba7ecb99232903907a1d5ec1c8e8",
+                "reference": "f0ddc6f3bc35ba7ecb99232903907a1d5ec1c8e8",
                 "shasum": ""
             },
             "require": {
@@ -5309,6 +5370,7 @@
                 "openlss/lib-array2xml": "^0.0.10||^0.5.1",
                 "php": "^7.0",
                 "php-cs-fixer/diff": "^1.2",
+                "phpmyadmin/sql-parser": "^4.0",
                 "symfony/console": "^3.0||^4.0",
                 "webmozart/glob": "^4.1",
                 "webmozart/path-util": "^2.3"
@@ -5360,7 +5422,7 @@
                 "inspection",
                 "php"
             ],
-            "time": "2019-03-02T21:31:34+00:00"
+            "time": "2019-03-17T22:14:30+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -5510,8 +5572,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "roave/security-advisories": 20,
-        "vimeo/psalm": 20
+        "roave/security-advisories": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

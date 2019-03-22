@@ -2,12 +2,12 @@
 <files>
   <file src="Tests\CoverageTest.php">
     <ImplementedReturnTypeMismatch occurrences="2">
-      <code>@return Generator&lt;int, Fixtures\TestObjectRepository, mixed, void&gt;</code>
-      <code>@return Generator&lt;int, Fixtures\TestObjectWriteableRepository, mixed, void&gt;</code>
+      <code>Generator</code>
+      <code>Generator</code>
     </ImplementedReturnTypeMismatch>
     <InvalidReturnType occurrences="2">
-      <code>@return Generator&lt;int, Fixtures\TestObjectRepository, mixed, void&gt;</code>
-      <code>@return Generator&lt;int, Fixtures\TestObjectWriteableRepository, mixed, void&gt;</code>
+      <code>Generator</code>
+      <code>Generator</code>
     </InvalidReturnType>
     <InvalidTemplateParam occurrences="2"/>
   </file>
@@ -18,9 +18,9 @@
   </file>
   <file src="src\AbstractDaftObjectEasyDBTree.php">
     <LessSpecificImplementedReturnType occurrences="3">
-      <code>@psalm-return array&lt;int, TDbObj&gt;</code>
-      <code>@psalm-return array&lt;int, TDbObj&gt;</code>
-      <code>@psalm-return array&lt;int, TDbObj&gt;</code>
+      <code>array</code>
+      <code>array</code>
+      <code>array</code>
     </LessSpecificImplementedReturnType>
   </file>
 </files>
