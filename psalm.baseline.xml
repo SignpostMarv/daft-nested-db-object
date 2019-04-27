@@ -9,18 +9,5 @@
       <code>Generator</code>
       <code>Generator</code>
     </InvalidReturnType>
-    <InvalidTemplateParam occurrences="2"/>
-  </file>
-  <file src="Tests\WriteableNestedTreeTest.php">
-    <LessSpecificImplementedReturnType occurrences="1">
-      <code>string</code>
-    </LessSpecificImplementedReturnType>
-  </file>
-  <file src="src\AbstractDaftObjectEasyDBTree.php">
-    <LessSpecificImplementedReturnType occurrences="3">
-      <code>array</code>
-      <code>array</code>
-      <code>array</code>
-    </LessSpecificImplementedReturnType>
   </file>
 </files>
